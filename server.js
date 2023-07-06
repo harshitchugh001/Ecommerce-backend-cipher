@@ -28,9 +28,12 @@ app.use(express.json());
 //product management
 const productRoutes = require('./routes/product');
 const userRoutes = require('./routes/user');
+const orderRoutes = require('./routes/order');
+
 
 app.use('/api/product', productRoutes);
 app.use('/api/user', userRoutes);
+app.use('/api/order', orderRoutes);
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
