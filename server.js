@@ -27,8 +27,10 @@ app.get('/', (req, res) => {
 app.use(express.json());
 //product management
 const productRoutes = require('./routes/product');
+const userRoutes = require('./routes/user');
 
-app.use('/api', productRoutes);
+app.use('/api/product', productRoutes);
+app.use('/api/user', userRoutes);
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
